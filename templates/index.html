@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Video Chatbot</title>
+</head>
+<body>
+    <h1>Asistente personal</h1>
+    <video id="avatarVideo" width="640" height="480" autoplay playinline>
+        Your browser does not support the video tag.
+    </video>
+    <div id="startDiv"style="display: flex;">
+        <button id="startButton">Start</button>
+    </div>
+    <div id="respuestas" style="display: flex;">
+        <label for="">Respuestas:</label>
+        <label for="respuestas-label" id="respuestas-label" >
+        </label>
+        
+    </div>
+    <script src="{{url_for('static', path='/app.js')}}"></script>
+</body>
+</html>
+
