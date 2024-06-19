@@ -25,13 +25,13 @@ app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 templates = Jinja2Templates(directory="templates")
-links = ["s3://miasistente/pregunta1.mp4",
-         "s3://miasistente/pregunta2.mp4",
-         "s3://miasistente/pregunta3.mp4",
-         "s3://miasistente/pregunta4.mp4"]
+links = ["https://miasistente.s3.amazonaws.com/pregunta1.mp4",
+         "https://miasistente.s3.amazonaws.com/pregunta2.mp4",
+         "https://miasistente.s3.amazonaws.com/pregunta3.mp4",
+         "https://miasistente.s3.amazonaws.com/pregunta4.mp4"]
 
-initialTalks = "s3://miasistente/initialtalk.mp4"
-finalTalks = "s3://miasistente/finaltalk.mp4"
+initialTalks = "https://miasistente.s3.amazonaws.com/initialtalk.mp4"
+finalTalks = "https://miasistente.s3.amazonaws.com/finaltalk.mp4"
 
 def create_talk(api_key, url_photo,text):
     if text in ids.keys():
